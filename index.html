@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#05070c">
 <title>Football Arena</title>
 <meta name="application-name" content="Football Arena"><meta name="apple-mobile-web-app-title" content="Football Arena"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="icon" type="image/png" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
 <style>
 :root{--left:#05c8d7;--right:#f10d19;--strip:#ffe83b;--pointer:#fff36b;--ink:#050505}
 *{box-sizing:border-box}
@@ -591,4 +591,5 @@ $("startBtn").onclick=async()=>{
 };
 window.addEventListener("pagehide",()=>{clearTimeout(state.demoTimer);stopTicks();stopSpinTicks();stopMusic();clearTimeout(state.autoTimer)});
 </script>
+<script>if("serviceWorker" in navigator&&location.protocol.startsWith("http")){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))}</script>
 </body></html>
